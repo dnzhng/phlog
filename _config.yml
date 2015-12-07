@@ -2,7 +2,7 @@
 # Can be used in your theme by calling 'site.title' and so on
 name: phlog
 description: Pho Blog
-url: 
+url: phlog.co
 
 # Used so Jekyll outputs the site correctly so Gulp can do what it wants
 source: src
