@@ -182,7 +182,7 @@ gulp.task('html', () =>
 
 // 'gulp deploy' -- pushes your dist folder to Github
 gulp.task('deploy', () => {
-  return gulp.src('dist/**/*')
+  return gulp.src(['dist/**/*', "./CNAME"])
     .pipe($.ghPages());
 });
 

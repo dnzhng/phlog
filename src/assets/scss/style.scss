@@ -2,7 +2,21 @@
 The main SCSS file for everything, yep
 */
 
+/*
+Vendor styles
+ */
+
 @import "main";
 @import "base";
 @import "layout";
 @import "syntax-highlighting";
+
+/*
+Modules, variables and utilities
+ */
+@import "fonts";
+
+/*
+Partials
+ */
+@import "home";
