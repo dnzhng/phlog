@@ -1,44 +1,56 @@
 {
   "name": "phlog",
-  "version": "0.0.0",
-  "description": "Pho Blog",
-  "homepage": "",
-  "author": {
-    "name": "Dan Zhang",
-    "email": "dyz2@duke.edu"
+  "private": true,
+  "description": "things you probably dont care about",
+  "version": "0.1.0",
+  "author": "Daniel Zhang <dan@dnzhng.com>",
+  "dependencies": {
+    "@contentful/rich-text-react-renderer": "^13.4.0",
+    "babel-plugin-styled-components": "^1.10.7",
+    "dotenv": "^8.2.0",
+    "gatsby": "^2.20.12",
+    "gatsby-image": "^2.3.1",
+    "gatsby-plugin-canonical-urls": "^2.3.0",
+    "gatsby-plugin-manifest": "^2.3.3",
+    "gatsby-plugin-offline": "^3.1.2",
+    "gatsby-plugin-react-helmet": "^3.2.1",
+    "gatsby-plugin-sharp": "^2.5.3",
+    "gatsby-source-contentful": "^2.3.5",
+    "gatsby-source-filesystem": "^2.2.2",
+    "gatsby-transformer-sharp": "^2.4.3",
+    "prop-types": "^15.7.2",
+    "react": "^16.12.0",
+    "react-dom": "^16.12.0",
+    "react-helmet": "^5.2.1",
+    "styled-components": "^5.0.1",
+    "typeface-vollkorn": "0.0.72",
+    "typeface-vollkorn-sc": "0.0.71"
   },
   "devDependencies": {
-    "autoprefixer": "^6.0.3",
-    "babel-core": "^6.0.20",
-    "babel-eslint": "^4.1.4",
-    "babel-preset-es2015": "^6.0.15",
-    "browser-sync": "^2.9.3",
-    "del": "^2.0.0",
-    "eslint": "^1.4.1",
-    "eslint-config-xo": "^0.7.1",
-    "eslint-config-xo-space": "^0.6.1",
-    "gulp": "git://github.com/gulpjs/gulp.git#4.0",
-    "gulp-cache": "~0.4.0",
-    "gulp-concat": "^2.6.0",
-    "gulp-eslint": "^1.0.0",
-    "gulp-gzip": "^1.1.0",
-    "gulp-htmlmin": "^1.0.0",
-    "gulp-if": "^2.0.0",
-    "gulp-imagemin": "^2.1.0",
-    "gulp-inject": "^3.0.0",
-    "gulp-load-plugins": "^1.0.0",
-    "gulp-minify-css": "^1.2.0",
-    "gulp-newer": "^1.0.0",
-    "gulp-postcss": "^6.0.0",
-    "gulp-rename": "^1.2.2",
-    "gulp-rev": "^6.0.0",
-    "gulp-sass": "^2.0.2",
-    "gulp-size": "^2.0.0",
-    "gulp-sourcemaps": "^1.3.0",
-    "gulp-uglify": "^1.4.1",
-    "gulp-uncss": "^1.0.0",
-    "shelljs": "^0.5.1",
-    "yargs": "^3.29.0",
-    "gulp-gh-pages": "^0.5.2"
+    "babel-eslint": "^10.1.0",
+    "eslint": "^7.0.0",
+    "eslint-config-prettier": "^6.11.0",
+    "eslint-plugin-prettier": "^3.1.3",
+    "prettier": "^1.19.1"
+  },
+  "keywords": [
+    "gatsby"
+  ],
+  "license": "MIT",
+  "scripts": {
+    "build": "gatsby build",
+    "develop": "gatsby develop",
+    "format": "prettier --write \"**/*.{js,jsx,json,md}\"",
+    "start": "npm run develop",
+    "serve": "gatsby serve",
+    "clean": "gatsby clean",
+    "test": "echo \"Write tests! -> https://gatsby.dev/unit-testing\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/dnzhng/phlog"
+  },
+  "bugs": {
+    "url": "https://github.com/dnzhng/phlog/issues"
   }
 }
