@@ -15,6 +15,7 @@ const IndexPage = ({ data }) => (
           title={node.title}
           body={node.body.json}
           slug={node.slug}
+          date={node.date || node.createdAt}
         />
       ))}
     </div>
@@ -30,6 +31,7 @@ export const query = graphql`
         node {
           title
           date
+          createdAt
           slug
           body {
             json

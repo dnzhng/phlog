@@ -30,10 +30,10 @@ const useScrollPosition = () => {
 
 const Header = ({ siteTitle, collapsed }) => {
   const scrollPos = useScrollPosition()
+
   return (
     <Styled.Header
-      className={collapsed || scrollPos > 10 ? 'collapsed' : ''}
-      scrollPos={scrollPos}
+      className={!(collapsed || scrollPos > 15) ? '' : 'collapsed'}
     >
       <div>
         <h3>
