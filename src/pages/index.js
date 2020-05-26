@@ -6,7 +6,7 @@ import SEO from '../components/Seo'
 import PostBody from '../components/PostBody'
 
 const IndexPage = ({ data }) => (
-  <Layout>
+  <Layout collapsed={false}>
     <SEO title="Home" />
     <div>
       {data.allContentfulPost.edges.map(({ node, index }) => (

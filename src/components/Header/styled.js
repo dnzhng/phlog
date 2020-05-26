@@ -13,7 +13,9 @@ export const Header = styled.header`
     border-right: 1px solid;
     border-color: rgba(0, 0, 0, 0);
 
-    &.collapsed {
+    ${props =>
+      (props.collapsed || props.scrollPos > 10) &&
+      `
       margin-left: -190px;
       line-height: 1;
       margin-top: 0;
@@ -21,20 +23,15 @@ export const Header = styled.header`
       padding: 20px;
       border-color: rgba(0, 0, 0, 0.7);
       transition: all 0.2s ease-out;
-    }
-  }
-
-  div {
-    margin: 0 auto;
-    max-width: 960;
-  }
-
-  h3 {
-    margin: 0;
+    `}
   }
 
   a {
     color: ${props => props.theme.colors.black};
     text-decoration: none;
   }
+`
+
+export const H3 = styled.h3`
+  margin: 0;
 `

@@ -5,7 +5,7 @@ import React, { useEffect, useState } from 'react'
 import * as Styled from './styled'
 
 const useScrollPosition = () => {
-  if (typeof window === 'undefined') return 500
+  if (typeof window === 'undefined') return 0
 
   // Store the state
   // eslint-disable-next-line react-hooks/rules-of-hooks
@@ -32,14 +32,10 @@ const Header = ({ siteTitle, collapsed }) => {
   const scrollPos = useScrollPosition()
 
   return (
-    <Styled.Header
-      className={!(collapsed || scrollPos > 15) ? '' : 'collapsed'}
-    >
-      <div>
-        <h3>
-          <Link to="/">{siteTitle}</Link>
-        </h3>
-      </div>
+    <Styled.Header collapsed={collapsed} scrollPos={scrollPos}>
+      <Styled.H3>
+        <Link to="/">{siteTitle}</Link>
+      </Styled.H3>
     </Styled.Header>
   )
 }
