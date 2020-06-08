@@ -13,6 +13,7 @@ const Post = ({ data: { contentfulPost } }) => (
       body={contentfulPost.body.json}
       slug={contentfulPost.slug}
       date={contentfulPost.date || contentfulPost.createdAt}
+      tags={contentfulPost.tags}
     />
   </Layout>
 )
@@ -24,6 +25,7 @@ export const query = graphql`
     contentfulPost(slug: { eq: $slug }) {
       title
       slug
+      tags
       date
       createdAt
       body {

@@ -16,4 +16,21 @@ export const Footer = styled.div`
   font-size: 0.75em;
   text-align: right;
   margin-bottom: 3rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  a {
+    color: ${props => props.theme.colors.contrastLightest};
+  }
+
+  ul {
+    padding-left: 0;
+    margin: 0;
+  }
+
+  li {
+    display: inline;
+    margin-right: 5px;
+  }
 `
