@@ -9,11 +9,12 @@ const IndexPage = ({ data }) => (
   <Layout collapsed={false}>
     <SEO title="Home" />
     <div>
-      {data.allContentfulPost.edges.map(({ node, index }) => (
+      {data.allContentfulPost.edges.map(({ node }) => (
         <PostBody
-          key={index}
+          key={node.slug}
           title={node.title}
           body={node.body.json}
+          tags={node.tags}
           slug={node.slug}
           date={node.date || node.createdAt}
         />
@@ -31,6 +32,7 @@ export const query = graphql`
         node {
           title
           date
+          tags
           createdAt
           slug
           body {

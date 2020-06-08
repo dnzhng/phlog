@@ -3,7 +3,7 @@ import { documentToReactComponents } from '@contentful/rich-text-react-renderer'
 
 import * as Styled from './styled'
 
-const PostBody = ({ title, body, slug, date }) => {
+const PostBody = ({ title, body, slug, date, tags }) => {
   return (
     <div>
       <a href={slug}>
@@ -11,7 +11,17 @@ const PostBody = ({ title, body, slug, date }) => {
       </a>
       {documentToReactComponents(body)}
       <Styled.HR />
-      <Styled.Footer>{new Date(date).toDateString()}</Styled.Footer>
+      <Styled.Footer>
+        <ul>
+          {tags.map(tag => (
+            <li key={tag}>
+              &bull;
+              <a href={`tags/${tag}`}>{`${tag}`}</a>
+            </li>
+          ))}
+        </ul>
+        {new Date(date).toDateString()}
+      </Styled.Footer>
     </div>
   )
 }

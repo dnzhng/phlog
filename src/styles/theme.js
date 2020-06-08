@@ -1,8 +1,4 @@
-import styled, {
-  css,
-  createGlobalStyle,
-  ThemeProvider,
-} from 'styled-components'
+import styled, { css, createGlobalStyle, ThemeProvider } from 'styled-components'
 import 'typeface-vollkorn'
 import 'typeface-vollkorn-sc'
 

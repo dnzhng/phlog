@@ -11,18 +11,47 @@ exports.createPages = async function({ actions, graphql }) {
         edges {
           node {
             slug
+            tags
+            title
+            date
+            createdAt
           }
         }
       }
     }
   `)
 
+  const tags = {}
+
   data.allContentfulPost.edges.forEach(edge => {
-    const slug = edge.node.slug;
+    const slug = edge.node.slug
+
+    edge.node.tags.forEach(tag => {
+      if (tags[tag]) {
+        tags[tag].push(edge.node)
+      } else {
+        tags[tag] = [edge.node]
+      }
+    })
+
     actions.createPage({
       path: slug,
-      component: require.resolve(`./src/pages/post.js`),
-      context: { slug }
+      component: require.resolve(`./src/templates/post.js`),
+      context: { slug },
+    })
+  })
+
+  actions.createPage({
+    path: `tags`,
+    component: require.resolve(`./src/templates/tags.js`),
+    context: { tags: Object.entries(tags) },
+  })
+
+  Object.entries(tags).forEach(([tag, posts]) => {
+    actions.createPage({
+      path: `tags/${tag}`,
+      component: require.resolve(`./src/templates/tag.js`),
+      context: { tag, posts },
     })
   })
 }
