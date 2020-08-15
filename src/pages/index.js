@@ -13,10 +13,11 @@ const IndexPage = ({ data }) => (
         <PostBody
           key={node.slug}
           title={node.title}
-          body={node.body.json}
+          body={node.excerpt ? node.excerpt.json : node.body.json}
           tags={node.tags}
           slug={node.slug}
           date={node.date || node.createdAt}
+          showReadMore={!!node.excerpt}
         />
       ))}
     </div>
@@ -27,7 +28,7 @@ export default IndexPage
 
 export const query = graphql`
   query AllContentfulPosts {
-    allContentfulPost {
+    allContentfulPost(sort: { fields: [date, createdAt], order: DESC }) {
       edges {
         node {
           title
@@ -36,6 +37,9 @@ export const query = graphql`
           createdAt
           slug
           body {
+            json
+          }
+          excerpt {
             json
           }
         }

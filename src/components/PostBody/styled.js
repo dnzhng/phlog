@@ -2,6 +2,8 @@ import { styled } from '../../styles/theme'
 
 export const H1 = styled.h1`
   margin: 0px;
+  margin-bottom: 30px;
+  padding-top: 20px;
 `
 
 export const HR = styled.hr`
@@ -9,6 +11,11 @@ export const HR = styled.hr`
   color: ${props => props.theme.colors.contrastLightest};
   height: 1px;
   border: none;
+`
+
+export const ReadMore = styled.a`
+  text-decoration: underline;
+  font-size: 0.9em;
 `
 
 export const Footer = styled.div`
