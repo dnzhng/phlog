@@ -2,6 +2,8 @@ import { styled } from '../../styles/theme'
 
 export const H1 = styled.h1`
   margin: 0px;
+  margin-bottom: 30px;
+  padding-top: 20px;
 `
 
 export const HR = styled.hr`

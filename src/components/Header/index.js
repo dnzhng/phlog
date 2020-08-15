@@ -36,6 +36,14 @@ const Header = ({ siteTitle, collapsed }) => {
       <Styled.H3>
         <Link to="/">{siteTitle}</Link>
       </Styled.H3>
+      <Styled.Nav collapsed={collapsed} scrollPos={scrollPos}>
+        <li>
+          <a href="/about">About</a>
+        </li>
+        <li>
+          <a href="/tags">Tags</a>
+        </li>
+      </Styled.Nav>
     </Styled.Header>
   )
 }

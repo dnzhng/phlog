@@ -10,6 +10,7 @@ export const theme = {
     background: '#fffffa',
     contrast: '#111',
     contrastLightest: '#dad9d9',
+    contrastMedium: '#B8BDC5',
     accent: 'red',
     white: '#ffffff',
   },
@@ -54,6 +55,9 @@ figure {
 const styles = () => `
 html {
   font-size: 16px;
+  @media (min-width: 960px) {
+    font-size: 20px;
+  }
 }
 
 body {
@@ -64,7 +68,7 @@ body {
   font-weight: 400;
   background-color: ${theme.colors.background};
   color: ${theme.colors.black};
-  max-width: 600px;
+  max-width: 700px;
   line-height: 2em;
   letter-spacing: 2px;
 
