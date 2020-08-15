@@ -28,7 +28,7 @@ export default IndexPage
 
 export const query = graphql`
   query AllContentfulPosts {
-    allContentfulPost {
+    allContentfulPost(sort: { fields: [date, createdAt], order: DESC }) {
       edges {
         node {
           title
