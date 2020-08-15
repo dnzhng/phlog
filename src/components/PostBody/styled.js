@@ -11,6 +11,11 @@ export const HR = styled.hr`
   border: none;
 `
 
+export const ReadMore = styled.a`
+  text-decoration: underline;
+  font-size: 0.9em;
+`
+
 export const Footer = styled.div`
   color: ${props => props.theme.colors.contrastLightest};
   font-size: 0.75em;
