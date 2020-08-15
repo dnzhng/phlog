@@ -4,7 +4,7 @@ if (process.env.ENVIRONMENT !== 'production') {
   dotenv.config()
 }
 
-const { spaceId, accessToken } = process.env
+const { spaceId, accessToken, gaTrackingId } = process.env
 
 module.exports = {
   siteMetadata: {
@@ -55,6 +55,12 @@ module.exports = {
       resolve: `gatsby-plugin-canonical-urls`,
       options: {
         siteUrl: `https://phlog.com`,
+      },
+    },
+    {
+      resolve: `gatsby-plugin-google-analytics`,
+      options: {
+        trackingId: gaTrackingId,
       },
     },
     `gatsby-plugin-styled-components`,
