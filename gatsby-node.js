@@ -44,7 +44,7 @@ exports.createPages = async function({ actions, graphql }) {
   actions.createPage({
     path: `tags`,
     component: require.resolve(`./src/templates/tags.js`),
-    context: { tags: Object.entries(tags) },
+    context: { tags },
   })
 
   Object.entries(tags).forEach(([tag, posts]) => {

@@ -13,7 +13,7 @@ const Tags = ({ pageContext: { tags } }) => (
     <SEO title="tags" />
     <h1>Tags</h1>
     <ul>
-      {tags.map(([tag, posts]) => (
+      {Object.entries(tags).map(([tag, posts]) => (
         <a key={tag} href={`tags/${tag}`}>
           <StyledLi>{`${tag} (${posts.length})`}</StyledLi>
         </a>

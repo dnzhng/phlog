@@ -1,6 +1,4 @@
 import styled, { css, createGlobalStyle, ThemeProvider } from 'styled-components'
-import 'typeface-vollkorn'
-import 'typeface-vollkorn-sc'
 
 export { css, styled, ThemeProvider }
 
@@ -65,6 +63,7 @@ body {
   margin-left: auto;
   margin-right: auto;
   font-family: 'Vollkorn', Palatino, 'Palatino Linotype', 'Palatino LT STD', 'Book Antiqua', Georgia, serif;
+  font-display: block;
   font-weight: 400;
   background-color: ${theme.colors.background};
   color: ${theme.colors.black};
@@ -85,6 +84,7 @@ a {
 h1, h2, h3, h4, h5, h6 {
   font-family: 'Vollkorn SC', Palatino, 'Palatino Linotype', 'Palatino LT STD', 'Book Antiqua', Georgia, serif;
   font-weight: 500;
+  font-display: block;
 }
 `
 

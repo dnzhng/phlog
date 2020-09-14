@@ -23,6 +23,7 @@ module.exports = {
   },
   plugins: [
     `gatsby-plugin-react-helmet`,
+    `gatsby-plugin-styled-components`,
     {
       resolve: `gatsby-source-contentful`,
       options: {
@@ -43,7 +44,7 @@ module.exports = {
       resolve: `gatsby-plugin-manifest`,
       options: {
         name: `phlog`,
-        short_name: `phlog.com`,
+        short_name: `phlog.co`,
         start_url: `/`,
         background_color: `#FFFFFA`,
         theme_color: `#FFFFFA`,
@@ -54,7 +55,7 @@ module.exports = {
     {
       resolve: `gatsby-plugin-canonical-urls`,
       options: {
-        siteUrl: `https://phlog.com`,
+        siteUrl: `https://phlog.co`,
       },
     },
     {
@@ -63,7 +64,6 @@ module.exports = {
         trackingId: gaTrackingId,
       },
     },
-    `gatsby-plugin-styled-components`,
     // this (optional) plugin enables Progressive Web App + Offline functionality
     // To learn more, visit: https://gatsby.dev/offline
     // `gatsby-plugin-offline`,
