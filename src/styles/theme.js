@@ -59,7 +59,7 @@ html {
 }
 
 body {
-  width: 70%;
+  width: 90%;
   margin-left: auto;
   margin-right: auto;
   font-family: 'Vollkorn', Palatino, 'Palatino Linotype', 'Palatino LT STD', 'Book Antiqua', Georgia, serif;
